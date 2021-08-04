@@ -4,8 +4,7 @@ Example Maven application.
 Builds two jobs with github actions:
 
  * Maven with Github's [cache action](https://github.com/actions/cache)
- * Maven with [maven-cache-github-action](https://github.com/skjolber/maven-cache-github-action)
- * Maven with [maven-cache-github-action-beta](https://github.com/skjolber/maven-cache-github-action-beta)
+ * Maven with [maven-cache-github-action](https://github.com/skjolber/maven-cache-github-action) or [maven-cache-github-action-beta](https://github.com/skjolber/maven-cache-github-action-beta)
 
 # Simple spring project
 About 47 MB worth of dependencies, pulled directly from Maven Central.
