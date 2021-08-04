@@ -7,11 +7,19 @@ Builds two jobs with github actions:
  * Maven with [maven-cache-github-action](https://github.com/skjolber/maven-cache-github-action) or [maven-cache-github-action-beta](https://github.com/skjolber/maven-cache-github-action-beta)
 
 # Simple spring project
-About 47 MB worth of dependencies, pulled directly from Maven Central.
+The project has about 47 MB worth of dependencies, pulled directly from Maven Central.
+
+# Experiment
+Bump Spring version from 2.2.0 to 2.2.13.
 
 # Results
-Build time is equivalent, except from when the pom.xml file changes. Then [maven-cache-github-action](https://github.com/skjolber/maven-cache-github-action) has a few seconds shorter build time, because it is able to restore the dependency cache from the previous build. The difference between the two jobs will vary depending on how good the fallback cache is / how much was changed, and the bandwidth of you repository store.
+Cache size results:
 
+ * about __150 MB for Github's cache action__, 
+ * about __50 MB for this action__ 
+ 
+# Take-aways
+The [maven-cache-github-action](https://github.com/skjolber/maven-cache-github-action) will see equivalent or a bit shorter build times. 
 
 
 
