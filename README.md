@@ -15,11 +15,11 @@ Bump Spring version from 2.2.0 to 2.2.13.
 # Results
 Cache size results:
 
- * about __150 MB for Github's cache action__, 
- * about __50 MB for this action__ 
+ * about __150 MB__ for Github's cache action__, 
+ * about __50 MB__ for this action__ 
  
 # Take-aways
-The [maven-cache-github-action](https://github.com/skjolber/maven-cache-github-action) will see equivalent or a bit shorter build times. 
+The [maven-cache-github-action](https://github.com/skjolber/maven-cache-github-action) will result in a bit shorter build times. However Github's cache read/write speeds seems decent for now, so for this small experiment, the difference is a few seconds, tops. 
 
 
 
