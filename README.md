@@ -9,17 +9,15 @@ Builds two jobs with github actions:
 # Simple spring project
 The project has about 47 MB worth of dependencies, pulled directly from Maven Central.
 
-# Experiment
-Bump Spring version from 2.2.0 to 2.2.13.
-
 # Results
-Cache size results:
 
- * about __150 MB__ for Github's cache action, 
- * about __50 MB__ for this action 
+ * Github's cache action downloads on each pom.xml change  
+ * [maven-cache-github-action](https://github.com/skjolber/maven-cache-github-action) or [maven-cache-github-action-beta](https://github.com/skjolber/maven-cache-github-action-beta) is able to restore the cache on pom.xml changes
  
 # Take-aways
-The [maven-cache-github-action](https://github.com/skjolber/maven-cache-github-action) __will result in a bit shorter build times__. However Github's cache read/write speeds seems decent for now, so for this small experiment, the difference is a few seconds, maximum. 
+Github's cache read/write speeds is very good. 
+
+The [maven-cache-github-action](https://github.com/skjolber/maven-cache-github-action) __will probably result in a bit shorter build times__, as cache speed > maven central speed. If you rely on a third party artifact repository, then probably cache speed >> repo speed.
 
 
 
