@@ -13,11 +13,12 @@ jobs:
   build-with-maven-cache-github-action:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 11
-      uses: actions/setup-java@v1
+    - uses: actions/checkout@v4
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
       with:
-        java-version: 11
+        java-version: 21
+        distribution: liberica
     - name: Restore cache
       uses: skjolber/maven-cache-github-action@v2.0
       with:
@@ -31,27 +32,24 @@ jobs:
   build-with-github-cache:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 11
-      uses: actions/setup-java@v1
+    - uses: actions/checkout@v4
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
       with:
-        java-version: 11
-    - uses: actions/cache@v2
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}    
-        restore-keys: |
-          ${{ runner.os }}-maven-
+        java-version: 21
+        distribution: liberica
+        cache: gradle
     - name: Build with Maven
       run: mvn -B package --file pom.xml
   build-with-maven-cache-github-action-beta:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 11
-      uses: actions/setup-java@v1
+    - uses: actions/checkout@v4
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
       with:
-        java-version: 11
+        java-version: 21
+        distribution: liberica      
     - name: Restore cache
       uses: skjolber/maven-cache-github-action-beta@v1
       with:
