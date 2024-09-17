@@ -73,7 +73,7 @@ jobs:
       uses: skjolber/maven-cache-github-action-beta@v1
       with:
         step: restore
-        cache-key-prefix: maven-cache-github-action-beta
+        cache-key-prefix: maven-cache-github-action-beta-wrapper
     - name: Build with Maven
       run: ./mvnw -B package --file pom.xml
     - name: Save cache
