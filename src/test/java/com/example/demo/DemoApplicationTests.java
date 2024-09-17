@@ -8,7 +8,7 @@ class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println("Code has changed 1");
+		System.out.println("Code has changed 12");
 	}
 
 }
