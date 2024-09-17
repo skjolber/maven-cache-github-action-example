@@ -9,6 +9,8 @@ class DemoApplicationTests {
 	@Test
 	void contextLoads() {
 		System.out.println("Code has changed 12");
+
+		throw new RuntimeException("MOCK");
 	}
 
 }
